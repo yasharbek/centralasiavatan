@@ -216,7 +216,7 @@ section{
     position: relative;
     color: white;
     text-align: center;
-    font-family: sans-serif;
+    font-family: Verdana;
     text-decoration-line: overline;
     text-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
 }
