@@ -1,76 +1,86 @@
-/* General Resets */
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,body{
     height: 100%;
     scroll-behavior: smooth;
-    background: var(--secondary-color);
-    color: white;
 }
 
-/* Variables */
-:root {
-    --main-color: rgb(129, 139, 135);
-    --secondary-color: rgb(52, 39, 4);
-}
-
-/* Typography */
-ul {
+ul{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     margin: 1.5rem;
     line-height: 1.5;
+
 }
 
-h2, h3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body {
+    background: var(--secondary-color);
+    color: white;
 }
 
-h2 {
-    font-size: 2rem;
-    line-height: 130%;
-    padding: 1rem 0;
-}
-
-h3 {
-    font-size: 1.3rem;
-    line-height: 125%;
-}
-
-/* Font Face */
-@font-face {
-    font-family: "romantico";
-    src: url("./assets/Romabntico\ Kustomtype.otf");
-}
-
-.logo h1 {
-    margin-left: 0.5rem;
-    font-family: "romantico", sans-serif;
-}
-
-/* Layout */
 .wrapper {
     overflow: hidden;
     text-align: center;
 }
 
-nav {
+.description{
+    margin-top: -3rem;
+}
+
+:root{
+    --main-color: rgb(129, 139, 135);
+    --secondary-color: rgb(52, 39, 4);
+}
+
+h2{
+    font-size: 2rem;
+    line-height: 130%;
+    padding: 1rem 0rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@font-face {
+    font-family: "romantico";
+    src: url("./assets/Romabntico\ Kustomtype.otf");
+}
+
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    line-height: 125%;
+}
+
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.start {
+.start{
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5px;
+    column-gap: 5x;
 }
 
-.links {
+.par1img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 1rem;
+}
+
+
+
+
+nav svg{
+    cursor: pointer;
+    z-index: 10;
+}
+
+.links{
     position: absolute;
     background: white;
     width: 100%;
@@ -84,54 +94,53 @@ nav {
     transform: translateX(100%);
 }
 
-.links a {
+.links a{
     color: var(--secondary-color);
     font-size: 2rem;
 }
 
-section {
-    padding: 5%;
+.logo{
+    display: flex;
+    align-items: center;
 }
 
+.logo h1{
+    margin-left: 0.5rem;
+    font-family: "romantico", sans-serif;
+}
+
+.logo img{
+    width: 2.5rem;
+}
+
+section{
+    padding: 5%;
+}
 .front-page {
     min-height: 100vh;
     background: rgb(163, 167, 163);
-    position: relative;
-    z-index: 1;
 }
 
-/* Images */
-.par1img {
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: 1rem;
+.some-info{
+    margin-top: 35vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+    text-align: center;
 }
 
-nav svg {
-    cursor: pointer;
-    z-index: 10;
+.some-info h3 {
+    font-family: sans-serif;
 }
 
-.navruz, .bkrnd {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+.calltoas{
+    text-align: center;
+    margin-top: 2rem;
 }
 
-.navruz {
-    filter: brightness(40%);
+.contact-info{
+    font-family: system-ui;
 }
-
-.bkrnd {
-    filter: brightness(20%);
-}
-
-/* Buttons */
-.calltoas button {
+.calltoas button{
     padding: 1rem;
     font-size: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -140,110 +149,221 @@ nav svg {
     border-radius: 1.5rem;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.21);
     margin: 1.5rem;
-}
 
-.cta-main {
+}
+.cta-main{
     background-color: var(--main-color);
     color: var(--secondary-color);
 }
 
-.cta-main:hover {
+.cta-main:hover{
     background-color: rgb(162, 206, 206);
     transition: background-color 0.4s ease-in-out;
 }
 
-.cta-sec {
+.cta-sec{
     background-color: var(--secondary-color);
     color: white;
 }
-
-.cta-sec:hover {
+.cta-sec:hover{
     background-color: rgb(102, 76, 6);
     transition: background-color 0.4s ease-in-out;
 }
 
-/* Components */
-.some-info {
-    margin-top: 35vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
-    text-align: center;
+.front-page {
+    z-index: 1;
+    position: relative;
 }
 
-.calltoas {
-    text-align: center;
-    margin-top: 2rem;
+.navruz {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(40%);
+}
+
+.bkrnd {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(20%);
 }
 
 .content {
     position: relative;
+    z-index: 1; /* Place above background image */
+}
+
+
+.archives{
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration-line: overline;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.subarch{
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: Verdana;
+    text-decoration-line: overline;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.p2012, .p2016 {
+    position: relative;
+}
+
+.celebration h3{
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.21);
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    font-size: 1.05rem;
     z-index: 1;
 }
 
-.about {
+.celebration img{
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.celebration img:hover{
+    filter: brightness(150%);
+    transition: filter 0.4s ease-in-out;
+}
+
+.about{
     color: white;
 }
 
 .about h2 {
     text-decoration-line: overline;
-    font-family: Georgia, serif;
+    font-family: georgia;
     text-align: center;
 }
 
-.about p {
+.about p{
     line-height: 150%;
     font-size: 1.3rem;
     margin-top: 0.5rem;
 }
 
-.about img {
+.about img{
     width: 100%;
     border-radius: 1rem;
     margin-top: 2rem;
 }
 
-.celebration img {
+.starttitle h2{
+    text-align: center;
+}
+
+.start img{
     width: 100%;
     border-radius: 1rem;
     margin-top: 2rem;
-    transition: filter 0.4s ease-in-out;
 }
 
-.celebration img:hover {
-    filter: brightness(150%);
+
+.what-we-do{
+    border-radius: 1rem;
+    margin-top: 1.5rem;
 }
 
-/* Media Queries */
-@media screen and (min-width: 768px) {
-    body {
+
+
+.what-we-do p{
+    font-size: 1.4rem;
+}
+
+
+.board{
+    margin-top: 2rem;
+}
+.board img{
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 0.8rem;
+    max-width: 15rem;
+    margin-top: 0.5rem;
+}
+
+.hislat{
+    float: left;
+}
+
+.gulchekhraolim{
+    float: right;
+}
+
+
+.board h3{
+    margin-top: 2rem;
+}
+
+@media screen and (min-wdith: 768px){
+    body{
         padding: 10%;
     }
 
-    .about {
+    .images{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .about{
         display: flex;
         gap: 5rem;
         justify-content: space-between;
     }
 
-    .about img {
+    .about img{
         width: 50%;
     }
 
-    .about h2 {
+    .about h2{
         text-align: start;
     }
 }
 
+.rounded-box{
+    background-color:  rgb(38, 28, 2);
+    padding: 10px; 
+    border-radius: 3rem;
+    display: inline-block; 
+}
+
 footer {
-    background-color: rgb(38, 28, 2);
+    background-color: rgb(38, 28, 2); 
     color: #fff;
     text-align: center;
     padding: 20px;
 }
 
-.rounded-box {
-    background-color: rgb(38, 28, 2);
-    padding: 10px;
-    border-radius: 3rem;
-    display: inline-block;
+/*
+.celebration iframe{
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
 }
+
+
+
+
+*/
